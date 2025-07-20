@@ -9,6 +9,8 @@ type Mutation {
 }
 
 type Query {
+  ping: String!
+
   getUser(username: String!): UserWithoutPassword
   getUsers: [UserWithoutPassword]
   getCurrentUser: UserWithoutPassword

@@ -1,4 +1,7 @@
 import { IResolvers } from "@graphql-tools/utils";
+
+import pingResolver from "./query/pingResolver";
+
 import createUserResolver from "./mutation/createUserResolver";
 import getUserResolver from "./query/getUserResolver";
 import loginResolver from "./mutation/loginResolver";
@@ -20,6 +23,8 @@ const resolvers: IResolvers = {
     ...getAirQualityResolver.Query,
     ...getForwardGeocodingResolver.Query,
     ...getReverseGeocodingResolver.Query,
+
+    ...pingResolver.Query,
   },
 
   Mutation: {
